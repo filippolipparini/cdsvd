@@ -58,26 +58,32 @@ The folder src contains two programs:
        of spectra (they correspond to the number of rows and columns of the
        matrix that has to be decomposed using the SVD.). 
 
-    The following command
+     The following command
 
-      ./cdsvd 301 100
+       ./cdsvd 301 100
 
-    produces the SVD spectra starting from 100 spectra each with 301 values
-    and corresponds to the output produced by the spectrum program as in the
-    previous example.
+     produces the SVD spectra starting from 100 spectra each with 301 values
+     and corresponds to the output produced by the spectrum program as in the
+     previous example.
 
-    OUTPUT:
+     OUTPUT:
 
-    - sing_val.dat: a formatted file containing the singular values of the
-      spectra matrix.
+     - sing_val.dat: a formatted file containing the singular values of the
+       spectra matrix.
 
-    - sing_cd.dat: a formatted file containing, for each singular value,
-      the corresponding SVD spectrum
+     - sing_cd.dat: a formatted file containing, for each singular value,
+       the corresponding SVD spectrum
 
-    - average.dat: a formatted file containing the average spectrum.
+     - average.dat: a formatted file containing the average spectrum.
        
-    COMPILING:
+     COMPILING:
 
-      cdsvd.f90 requires to be linked to a lapack library, for instance:
+     cdsvd.f90 requires to be linked to a lapack library, for instance:
 
-        gfortran -o cdsvd -lblas -llapack
+       gfortran -o cdsvd -lblas -llapack
+
+In the example directory, the input file for the spectrum program, and
+subsequently the cdsvd one, are given, and can be used to run the examples 
+described above. The output files produced by both programs are given as
+a reference in the example/ref_files folder.  
+
